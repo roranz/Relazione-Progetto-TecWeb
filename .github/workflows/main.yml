@@ -4,7 +4,10 @@
 # Davide Gerosa (2021) https://github.com/dgerosa
 
 name: writeapaper
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   paper:
     runs-on: ubuntu-latest
