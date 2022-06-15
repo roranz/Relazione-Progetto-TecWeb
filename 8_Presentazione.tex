@@ -1,0 +1,39 @@
+\section{Presentazione}
+\label{Presentazione}
+    \subsection{Suddivisione dei file}
+    Per gestire gli aspetti visivi del sito internet, sono stati prodotti quattro file:
+    \begin{itemize}
+        \item \texttt{style.css} per gli schermi desktop o con pixel maggiori di 1061px;
+        \item \texttt{tablet.css} per i dispositivi tablet o per schermi con pixel minori di 1061px;
+        \item \texttt{mobile.css} per dispositivi smartphone o per schermi con pixel minori di 810px;
+        \item \texttt{print.css} per stampe con stampanti tradizionali.
+    \end{itemize}
+    La costruzione di tutti questi file \texttt{.css} hanno lo scopo di ottenere un design capace di adattarsi a qualsiasi dispositivo. A supporto di questa implementazione le misure usate per scrivere le regole CSS sono misure relative come \texttt{em} o percentuali, in modo che l'intero sito possa scalare adeguatamente adattandosi alle scelte dell'utente.
+    
+    \subsection{CSS Desktop}
+    Le caratteristiche del design per gli schermi grandi sono elencati di seguito:
+    \begin{itemize}
+        \item Il titolo, il logo e la barra di navigazione si espandono in orizzontale, occupando tutto lo schermo; tutti i link della barra di navigazione sono allineati in orizzontale;
+        \item Nella \textit{Home} la sezione relativa all'anteprima degli articoli è spostata a destra;
+        \item Nella pagina dedicata alle \textit{News} tutti gli articoli sono raggruppati con una grid per evitare troppo scrolling verticale;
+        \item L'intestazione e i record delle tabelle si espandono in orizzontale occupando tutto lo schermo a disposizione.
+    \end{itemize}
+    
+    \subsection{CSS Tablet e mobile}
+    Le caratteristiche del design per gli schermi di dispositivi portatili sono elencati di seguito:
+    \begin{itemize}
+        \item Il titolo del sito si toglie lasciando spazio alla visualizzazione soltanto del logo che funge da titolo del sito;
+        \item La barra di navigazione viene ridimensionata allineando in verticale i link di navigazione nel sito con i link per l'account dell'utente; se lo schermo si riduce ulteriormente la barra di navigazione si toglie lasciando spazio a due pulsanti che, se premuti, fanno scendere un menù a tendina che mostra i link della barra;
+        \item Nella \textit{Home} la sezione relativa all'anteprima degli articoli è spostata al centro seguendo il normale flusso del contenuto;
+        \item Nella pagina dedicata alle \textit{News} tutte gli articoli sono visualizzati in verticale uno sotto l'altro;
+        \item Il design delle tabelle è stato ridimensionato per trasformarsi in maniera elegante ed evitare lo scrolling orizzontale. Ogni record della tabella viene visualizzato come un blocco dove ogni cella ha la propria intestazione e il proprio dato informativo; le intestazioni incapsulate dentro il tag HTML \texttt{<thead>} si tolgono e ciò impatta sullo scroll verticale aumentando la lunghezza della pagina da scorrere, ma non crea frustrazione perché è accettato dall'utente;
+        \item Le form restano invariate.
+    \end{itemize}
+    
+    \subsection{CSS per stampe}
+    Le caratteristiche del design per le stampe sono elencati di seguito:
+    \begin{itemize}
+        \item La barra di navigazione viene nascosta lasciando spazio alla visualizzazione del logo, del titolo e della breadcrumb;
+        \item Tutti gli elementi grafici sono stati nascosti lasciando soltanto il mero contenuto con un font con grazie adatto alle stampe;
+        \item Le tabelle sono visualizzate normalmente in orizzontale con le celle delimitate da bordi neri e al loro interno il contenuto.
+    \end{itemize}

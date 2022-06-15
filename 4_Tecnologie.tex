@@ -1,7 +1,14 @@
 \section{Tecnologie}
     \subsection{Ambiente di sviluppo}
-    \subsection{Stack tecnologico}
-        \subsubsection{Server}
-        \subsubsection{Client}
-    \subsection{Configurazione}
-
+    Lo strumento di sviluppo è stato effettuato su Windows 10/11 e in parte su Ubuntu Impish Indri (21.10) da parte di 4 diversi sviluppatori e con l’utilizzo di Visual Studio Code.
+    Ciò crea un ambiente di sviluppo eterogeneo che può portare a risultati inaspettati nel momento di trasferire il lavoro su un altro sistema o in fase di deploy.
+    Per questa ragione la maggior parte dello sviluppo, del backend è stato eseguito in un ambiente virtuale (un container docker in particolare) con una configurazione il più possibile simile all’ambiente di deploy.
+    Ciò unito ad uno sviluppo collaborativo tramite Github ha avuto come conseguenza una bassa probabilità di incompatibilità con l’ambinete di deploy  ed il vantaggio di non dover costantemente fare test di caricamento sul server di laboratorio.
+    \subsection{Tecnologie utilizzate}
+    Le tecnologie utilizzate per la realizzazione del sito sono state in parte influenzate dall’ambiente finale di deploy (quale il server di laboratorio), in particolare gli applicativi lato Server: PHP (v. 7.4.3), Apache2 (v. 2.4.41), MariaDB (v.10.3.34) e Ubuntu (20.02.4 LTS).\\
+    A lato Client è stato utilizzato ovviamente JavaScript e per quanto riguarda HTML e CSS si è optato per HTML5 e CSS3 anche se con qualche asterisco. Nella scelta tra XHTML 4.1 e HTML5 e tra CSS 2 e 3 si è optato per l’ultima versione poichè pur essendo tecnologie nuove e non ancora pienamente supportate, varie fonti (W4C survey e caniuse) riportano una diffusione tale da non creare problemi di compatibilità anche con i browser più vecchi a, patto di non utilizzare componenti troppo avanzate dello standard. Oltre alle informazioni reperite in rete abbiamo eseguito anche i nostri piccoli test che hanno confermato le nostre ricerche.\\
+    Una volta fatti i conti con la realtà è risultato che anche i browser più vecchi supportano discretamente lo standard HTML5 (fatta eccezione per IE 6 e 9 che a volte è sono un po’ restrittivi ma in casi non troppo complicati è sempre possibile un workaround) mentre i problemi sono più forti con CSS3 che è ben supportato dalla maggio parte dei browser attualmente in uso ma ha grosse difficoltà nei browser più vecchi come IE e Opera Mini che supportano molto poco i le caratteristiche principali del nuovo standard come flex, grid e attributi avanzati.\\
+    Fatte queste considerazioni, è stato deciso di usufruire dei vantaggi di pulizia e raffinatezza offerti dal nuovo standard CSS3 qualora questo sia supportato, optando per un design che trae vantaggio dal nuovo standard ma passa allo standard precedente in caso il nuovo non sia adeguatamente supportato tramite media query.\\
+    Per quanto riguarda le versioni del software client (quindi JavaScript e browser), il sito è stato prodotto sulla latest release di Google Chrome ma testato frequentemente su altre versioni spaziando inoltre tra diversi browser (vedi capitolo dei \blue{\hyperref[Test]{Test di accessibilità}}).
+    \subsection{Configuraizone e installazione}
+    Il sito è già configurato e per eseguirlo è sufficiente posizionare il file all interno della root directory del web server.
