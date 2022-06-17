@@ -1,62 +1,75 @@
 \section{Analisi}
     \subsection{Analisi dell'Utenza}
     Il target principale del sito è la tifoseria dell'AC Torre Archimede che, pur essendo abituata al mondo del calcio e familiare con lo stadio della squadra, potrebbe non essere pratica di strumenti informatici. Per questo motivo, il sito internet deve tenerne conto, rendendo il contenuto il più chiaro e semplice possibile.\\
-    Un altro punto da considerare sull'utenza del sito è la sua provenienza: la squadra dell'AC Torre Archimede partecipa soltanto a campionati minori, senza mai operare a livello internazionale, presumendo che l'utenza sia italiana, per la maggior parte di loro, residente in zone limitrofe allo stadio. Per questo motivo, la lingua usata nel sito deve essere quella italiana (ad eccezione dei comuni termini di internet, ad esempio, Home, News, Login, ecc.), non richiedendo più versioni alternative in diverse lingue.
+    Un altro punto da considerare sull'utenza del sito è la sua provenienza: la squadra dell'AC Torre Archimede partecipa soltanto a campionati minori, senza mai operare a livello internazionale, presumendo che l'utenza sia italiana, per la maggior parte di loro, residente in zone limitrofe allo stadio. Per questo motivo, la lingua usata nel sito deve essere quella italiana (ad eccezione dei comuni termini di internet, ad esempio: Home, News, Login, ecc.), non richiedendo più versioni alternative in diverse lingue.
 
     \subsection{Base Informativa}
-    Secondo un analisi preliminare del tipo di utenti, le informazioni che un utente si aspetta di trovare e le domande che il sito deve rispondere quando esso vi si accede riguardano l'attività sportiva della società, in particolar modo:
+    Secondo un'analisi preliminare del tipo di utenti, le informazioni che un utente si aspetta di trovare e le domande a cui il sito deve rispondere quando esso vi si accede riguardano l'attività sportiva della società, in particolar modo:
     
     \begin{itemize}
         \item Lo stadio (Dove si trova? Come è fatto?);
-        \item La squadra (Chi sono i calciatori? e i dirigenti? A quali eventi partecipano?);
-        \item Le gare (Quando giocano? In che stadio? Contro chi? Quanto costa un biglietto?).
+        \item La squadra (Chi sono i calciatori? E i tecnici? A quali eventi partecipano?);
+        \item Le gare (Quando si giocano? In che stadio? Contro chi? Quanto costa un biglietto?).
     \end{itemize}
     
     \noindent
     Tenendo conto di queste considerazioni, per soddisfare il fabbisogno informativo dell'utente, il sito deve proporre informazioni che riguardano gli argomenti sopra citati, utilizzando come strumenti comunicativi:
     
     \begin{itemize}
-        \item Testo descrittivo, se si vuole utilizzare descrizioni per approfondire determinati argomenti (ad esempio, descrivendo come è fatto lo stadio della squadra);
-        \item Articoli, se si vuole tenere aggiornato l'utente su fatti che accadono nella sfera quotidiana della società;
-        \item Elenchi e tabelle, se si vuole comunicare all'utente una raccolta di dati riferiti ad un certo argomento.
+        \item Testo descrittivo, se si vogliono utilizzare descrizioni per approfondire determinati argomenti (ad esempio, descrivendo come è fatto lo stadio della squadra);
+        \item Articoli, se si vogliono tenere aggiornato l'utente su fatti che accadono nella sfera quotidiana della società;
+        \item Elenchi e tabelle, se si vogliono comunicare all'utente una raccolta di dati riferiti ad un certo argomento.
     \end{itemize}
 
 
     \subsection{Attori}
-    Basandosi sulle necessità del sito, tutti gli utenti si possono raggruppare in tre tipologie: gli utenti non autenticati, gli utenti autenticati e gli amministratori.
+    Basandosi sulle necessità del sito, tutti gli utenti si possono raggruppare in tre tipologie: quelli non autenticati, quelli autenticati e gli amministratori.
     
-        \subsubsection{Attore utente non autenticato}
+        \subsubsection{Utente non autenticato}
         
         Gli utenti non autenticati sono persone che possono navigare sul sito, ma hanno qualche limitazione. Possono visitare la Homepage, guardare le notizie pubblicate dalla società, leggere la descrizione sullo stadio, consultare l'elenco delle gare in programma, ma non possono acquistare biglietti oppure accedere a sezioni apposite per altri tipi di utenti. Questo tipo di utente può registrarsi al sito per ottenere delle credenziali d'accesso, utili per poter fare l'autenticazione, oppure autenticarsi se ne è già in possesso.
         
-        \subsubsection{Attore utente autenticato}
+        \subsubsection{Utente autenticato}
         
-        Gli utenti autenticati sono persone che hanno inserito le proprie credenziali d'accesso e si sono autenticati correttamente. Oltre a poter navigare in tutte le aree del sito, possono acquistare biglietti, scegliendo la gara e il settore dove guardarla, e accedere ad una sezione personale dove vengono visualizzati i dati anagrafici dell'utente e l'elenco dei suoi biglietti acquistati.\\ L'utente autenticato può anche togliere l'autenticazione per ritornare ad essere un utente non autenticato.
+        Gli utenti autenticati sono persone che hanno inserito le proprie credenziali d'accesso e si sono autenticati correttamente. Oltre a poter navigare in tutte le aree del sito, possono acquistare biglietti, scegliendo la gara e il settore dove guardarla, e accedere a una sezione personale dove vengono visualizzati i dati anagrafici dell'utente e l'elenco dei suoi biglietti acquistati.\\ L'utente autenticato può anche effettuare un logout per deautenticarsi.
         
-        \subsubsection{Attore amministratore}
+        \subsubsection{Utente amministratore}
         
-        Gli amministratori sono utenti autenticati al sito con delle credenziali d'accesso apposite che gli permettono l'ingresso ad una sezione riservata esclusivamente a loro. In questa area, hanno strumenti per:
+        Gli amministratori sono utenti autenticati al sito con delle credenziali d'accesso apposite che gli permettono l'ingresso ad una sezione riservata esclusivamente a loro. In quest'area, hanno strumenti per:
         \begin{itemize}
             \item Aggiungere articoli inerenti alla società;
-            \item Aggiungere o togliere le gare del calendario.
+            \item Aggiungere, modificare o rimuovere le partite del calendario.
         \end{itemize}
         Anche loro hanno la possibilità di navigare nel sito e fare acquisti di biglietti.
         
 
     \subsection{Requisiti funzionali}
-    Il primo requisito funzionale che il nostro sito deve adempiere è avere una comunicazione efficace delle informazioni da esporre; cioè organizzare il contenuto in modo tale da poter essere facilmente compreso dalla maggior parte degli utenti che navigano in Internet. Per soddisfare questo requisito, si è sviluppato il sito concentrandosi di più sul contenuto da esporre, sviluppando un design minimale, ma efficace e adattabile a qualsiasi dispositivo.\\
-    Un altro requisito da soddisfare è mettere a disposizione dell'utente una piattaforma che gli permetta di fare acquisti online per comprare dei biglietti; a questo scopo si è implementato all'interno del sito una serie di strumenti per:
+    Il primo requisito funzionale che il nostro sito deve adempiere è avere una comunicazione efficace delle informazioni da esporre, cioè organizzare il contenuto in modo tale da poter essere facilmente compreso dalla maggior parte degli utenti che navigano in internet. Per soddisfare questo requisito, ci si è concentrati di più sul contenuto da esporre, sviluppando un design minimale, ma efficace e adattabile a qualsiasi dispositivo.\\
+    Un altro requisito da soddisfare è mettere a disposizione dell'utente una piattaforma che gli permetta di fare acquisti online per comprare dei biglietti; a questo scopo, all'interno del sito, è stata implementata una serie di strumenti per:
     
     \begin{itemize}
-        \item Controllare le partite future e/o da acquistare;
+        \item Controllare le partite in programma e quella passate giocate dalla squadra Torre Archimede;
         \item Acquistare un biglietto;
         \item Controllare i biglietti acquistati;
-        \item Cancellare e chiedere eventualmente il rimborso per un biglietto acquistato.
+        \item Cancellare e richiedere eventualmente il rimborso per un biglietto acquistato.
     \end{itemize}
     
     \noindent
-    L'ultimo requisito da soddisfare, ma non meno importante, è avere un sito facilmente navigabile e accessibile a tutti. Il sito deve essere accessibile per evitare di limitare la navigazione alle persone con difficoltà nel distinguere i colori o alle persone non vedenti.\\
-    Per soddisfare questo requisito sono state studiate delle strategie per permettere sia a persone normodotate che diversamente abili di riuscire a trovare facilmente tutte le informazioni e i contenuti all'interno del sito.
-    
+    L'ultimo requisito da soddisfare, ma non meno importante, è avere un sito facilmente navigabile e accessibile a tutti. Il sito deve essere accessibile per evitare di limitare la navigazione alle persone con difficoltà.\\
+    Per soddisfare questo requisito sono state studiate delle strategie per permettere a qualsiasi categoria di utenza di riuscire a trovare facilmente tutte le informazioni e i contenuti all'interno del sito.\\
+    \vspace*{0.05in} \\
+    A fine di test, vengono fornite le seguenti credenziali di accesso:
+    \vspace*{0.1in} \\
+    \begin{center}
+        \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm} } 
+        \hline
+         & \textbf{Email} & \textbf{Password} \\
+        \hline
+        \textbf{Utente Autenticato} & utente & utente\\
+        \hline
+        \textbf{Amministratore} & admin & admin\\
+        \hline
+        \end{tabular}
+    \end{center}
     
 

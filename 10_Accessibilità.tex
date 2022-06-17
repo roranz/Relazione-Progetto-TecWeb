@@ -1,26 +1,35 @@
 \section{Accessibilità}
     \subsection{Strategie d'implementazione}
-    Si è cercato attentamente di rendere il sito accessibile per permetterne l'utilizzo a qualsiasi fascia di utenza, ponendo il focus del lavoro svolto su due diversi problemi:
+    Si è cercato attentamente di rendere il sito accessibile per permetterne l'utilizzo a qualsiasi fascia di utenza, ponendo il focus del lavoro svolto su diversi problemi:
     \begin{itemize}
-        \item Permettere a utenti diversamente abili che utilizzano gli screen reader di comprendere meglio il contenuto del sito;
-        \item Permettere a utenti che utilizzano dispositivi mobile di navigare facilmente nel sito.
+        \item Permettere agli utenti diversamente abili che utilizzano gli screen reader di comprendere meglio il contenuto del sito;
+        \item Permettere agli utenti ipovedenti e daltonici una navigazione senza problemi, utilizzando font, contrasti e colori in maniera accessibile.
+        \item Permettere agli utenti che utilizzano dispositivi mobile di navigare facilmente nel sito.
     \end{itemize}
-    Per gestire questi aspetti sono stati individuati i seguenti punti critici: Immagini, Aiuti alla navigazione, Testo, Tabelle, Form, Navigazione con dispositivi mobile, Messaggi in Javascript.\\
+    Per gestire questi aspetti sono stati individuati i seguenti punti critici: immagini, aiuti alla navigazione, testo, tabelle, form, navigazione con dispositivi mobile, messaggi in Javascript.\\
     Per ogni punto critico sono stati studiati ed implementati degli strumenti per l'accessibilità che poi sono stati successivamente verificati con appositi test.
     \subsubsection{Immagini}
-    si è cercato di rendere accessibili le immagini tramite appositi attributi \texttt{alt}, i quali permettono agli screen readers di dare un'appropriata descrizione di ciò che l'immagine rappresenta,in modo da non tagliare fuori gli utenti con disabilità visive.
+    Si è cercato di rendere accessibili le immagini tramite appositi attributi \texttt{alt}, i quali permettono agli screen readers di dare un'appropriata descrizione di ciò che l'immagine rappresenta,in modo da non tagliare fuori gli utenti con disabilità visive.
     \subsubsection{Aiuti alla navigazione}
     Il sito è stato dotato di aiuti per la navigazione come il pulsante per saltare la barra di navigazione e andare direttamente al contenuto, utile per evitare che lo screen reader debba ogni volta rileggere il menù all’apertura di ogni pagina, o la freccia per tornare su una volta arrivati a fondo pagina. Chiaramente tutti questi aiuti sono raggiungibili tramite tabulazione.
     \subsubsection{Testo}
-    Nella scelta del testo si è optato per un font senza grazie nella versione del sito dedicata agli schermi. Si è scelta una dimensione adeguata che permettesse alla maggior parte degli utenti una lettura senza affaticare la vista o di creare problemi alle persone con disabilità cognitive. I testi si è cercato di comporli in modo che fossero di facile comprensione. Si è evitato il corsivo, i testi lampeggianti o sottolineature inutili che andrebbero a creare ambiguità con i link.
+    Nella scelta del testo si è optato per un font senza grazie nella versione del sito dedicata agli schermi. Si è scelta una dimensione adeguata che permettesse alla maggior parte degli utenti una lettura senza affaticare la vista o di creare problemi alle persone con disabilità cognitive. I testi si è cercato di comporli in modo che fossero di facile comprensione. Si è evitato il corsivo, i testi lampeggianti o sottolineature inutili che andrebbero a creare ambiguità con i link.\\
+    I link esterni sono presenti solo nella biglietteria e il reindirizzamento esterno viene segnalato a parole in maniera esplicita.
     \subsubsection{Tabelle}
-    Per gli utenti con disabilità di tipo visivo risulta abbastanza complicato trasformare un oggetto bidimensionale come la tabella in un qualcosa monodimensionale come può essere l’audio di uscita di uno screen reader. Per questo motivo, si è deciso di rendere le tabelle accessibili inserendo un tag \texttt{<caption>} subito dopo il tag \texttt{<table>} per fornire una breve descrizione di quello a cui la tabella fa riferimento e l'attributo \texttt{scope="col"} nelle celle delle intestazioni per supportare gli screen readers alla lettura delle tabelle.
+    Per gli utenti con disabilità di tipo visivo risulta abbastanza complicato trasformare un oggetto bidimensionale come la tabella in un qualcosa monodimensionale come può essere l’audio di uscita di uno screen reader. Per questo motivo, si è deciso di rendere le tabelle accessibili inserendo un tag \texttt{<caption>} subito dopo il tag \texttt{<table>} per fornire una breve descrizione di quello a cui la tabella fa riferimento e l'attributo \texttt{scope="col"} nelle celle delle intestazioni per supportare gli screen readers alla lettura delle tabelle. Sfortunatamente Le tabelle in questo sito non possiedono un attributo che possa da se fare da chiave per l'intera riga e di conseguenza l'inserimento dell'attributo \texttt{scope="row"} è stato evitato poiché avrebbe causato solo confusione.
     \subsubsection{Form}
-    Riguardo alle form, si è utilizzato il tag \texttt{<label>} per poter adeguatamente identificare ogni relativo campo input. Nel caso di errori si è deciso di inserire dei messaggi (PHP o Javascript) sotto i relativi campi input che avranno il bordo color verde o rosso a seconda che siano stati o meno compilati correttamente. Inoltre, è presente un'alternativa anche per gli utenti con disabilità visive che appare premendo il pulsante \texttt{submit} che riporta sopra la form tutti i campi che presentano messaggi di errore dentro una tabella comprensiva di link, ciascuno dei quali fa saltare l'utente direttamente al relativo campo dati nel quale l'errore si è verificato.
+    Riguardo alle form, si è utilizzato il tag \texttt{<label>} per poter adeguatamente identificare ogni relativo campo input. Nel caso di errori si è deciso di inserire dei messaggi (PHP o Javascript) sotto i relativi campi input che avranno il bordo color verde o rosso a seconda che siano stati o meno compilati correttamente. I messaggi inseriti sono presentati in modo che siano facilmente localizzabili da tutte le categorie di utenti. In particolare sono stati pensati per essere compresi dalle tecnologie assistive tramite il collegamento al controllo ha ha generato l'errore e l'impiego dell'attributo \texttt{aria-live="assertive"} per fari si che vengano presentati all'utente immediatamente. Inoltre quando un errore viene rilevato durante il tentativo di inviare il form al server, il focus viene spostato sul primo elemento in ordine naturale ad avere un errore.
     \subsubsection{Navigazione con dispositivi mobile}
     Durante la fase di costruzione del progetto, si è cercando di fare in modo che il design del sito possa mantenersi anche con differenti dispositivi hardware, proprio perché il mondo del mobile presenta dimensioni talmente variegate da non permettere a chi progetta siti web di potersi concentrare su 3/4 dimensioni di riferimento. Per questo motivo si è deciso di seguire la politica del responsive design inserendo adeguatamente dei breakpoints per adattare le pagine web in modo da renderle accessibili su tutti i dispositivi. Inoltre, si è deciso che per quanto riguarda gli smartphone fosse necessario mettere a disposizione dell'utente una così detta "icona ad hamburger" per permettere una presentazione più elegante senza perdere in praticità, che di fatto va a nascondere la barra di navigazione dividendola tra parte di contenuti e parte dedicata alla gestione dell'area personale.  Per quanto riguarda l'intestazione del sito, si è deciso di lasciare il logo rimuovendo il titolo per motivi di praticità ed eleganza. Infine, si è cercato di fare in modo che le tabelle si trasformassero in modo elegante nel passaggio da schermi di dimensioni standard a schermi piccoli utilizzando l’attributo \texttt{data-label} per accostare la relativa intestazione al contenuto della singola cella.
     \subsubsection{Messaggi in Javascript}
     Una particolare attenzione è stata rivolta alla gestione degli errori via Javascript, in modo che non fosse possibile una ridondanza tra errori Javascript ed errori PHP, per evitare un sovraccarico cognitivo che andrebbe ad impedire una corretta fruizione del sito da parte dell’utente. Il codice Javascript va quindi a controllare che non siano già presenti messaggi di errore in PHP e nel caso andrà a sostituirli.
+    \subsubsection{Colori}
+    Sono stati scelti colori specifici che rispecchino i requisiti di accessibilità e non creino problemi a utenti affetti da qualsiasi tipo di daltonismo. Di seguito, viene caricato un estratto della palette scelta:
+    \begin{center}
+        \includegraphics[scale=0.8]{images/palette.png}
+    \end{center}
+    
+    \newpage
     \subsection{Test}
     \label{Test}
     Per verificare che il sito funzionasse correttamente dal punto di vista dell'accessibilità, sono stati fatti i seguenti test:
@@ -29,5 +38,5 @@
         \item Tramite lo screen reader NVDA si è controllata la corretta accessibilità al sito per persone con disabilità visive;
         \item Si è verificato che ci sia un corretto contrasto a livello di scelta dei colori utilizzati in ciascuna delle singole pagine;
         \item Si è  verificato che il sito venisse visualizzato correttamente anche con differenti browser;
-        \item Si è svolto il questionario per i punti bonus.
+        \item Si è svolto il questionario di accessibilità del dipartimento di matematica, effettuando tutti i test per una durata complessiva di circa 6 ore complessive.
     \end{itemize}

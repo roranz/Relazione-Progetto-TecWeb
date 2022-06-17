@@ -1,29 +1,29 @@
 \section{Struttura}
     \subsection{Separazione tra struttura, comportamento e presentazione}
-    Uno dei problemi che si è dovuto risolvere per la scrittura del codice HTML è stato quello di evitare l'uso di codice "inline" di altri linguaggi di programmazione all'interno dei file \texttt{.html}, nell'ottica di  garantire il principio di separazione tra struttura, presentazione e comportamento. L'idea è stata quella di frammentare il codice in più parti ricostruendolo successivamente con delle chiamate dinamiche, ogni qualvolta viene caricata una pagina, utilizzando appositi file di codice HTML pure denominati \textit{presets}; alcuni \textit{presets} contengono il mero contenuto da stampare a video, altri invece \textit{template} per costruire la struttura di una pagina web. L'implementazione di questa idea è supportata anche da stringhe racchiuse da una coppia di percentuali, chiamate \textit{placeholders}, necessarie per inserire dinamicamente dei dati generati dal server durante l'invocazione di una pagina (vedi capitolo \blue{\hyperref[Comportamento]{Comportamento}}).\\ I vantaggi che porta questo approccio sono:
+    Uno dei problemi che si è dovuto risolvere per la scrittura del codice HTML è stato quello di evitare l'uso di codice "inline" di altri linguaggi di programmazione all'interno dei file \texttt{.html}, nell'ottica di  garantire il principio di separazione tra struttura, presentazione e comportamento. L'idea è stata quella di frammentare il codice in più parti ricostruendolo successivamente con delle chiamate dinamiche, ogni qualvolta venga caricata una pagina, utilizzando appositi file di codice HTML denominati \textit{presets}; alcuni \textit{presets} contengono il mero contenuto da stampare a video, altri invece, chiamati \textit{template}, forniscono del codice utile a costruire la struttura di una pagina web. L'implementazione di questa idea è supportata anche da stringhe racchiuse da una coppia di percentuali, chiamate \textit{placeholders}, necessarie per inserire dinamicamente dei dati generati dal server durante l'invocazione di una pagina (vedi capitolo \blue{\hyperref[Comportamento]{Comportamento}}).\\ I vantaggi che porta questo approccio sono:
     \begin{itemize}
-        \item migliore manutenibilità del codice;
-        \item codice più pulito.
+        \item Migliore manutenibilità del codice;
+        \item Codice più pulito.
     \end{itemize}
     
     \subsection{Organizzazione generale del codice}
     Per l'implementazione del codice HTML, si è deciso di seguire le seguenti regole:
     \begin{itemize}
-        \item Per evitare troppi tag \texttt{<div>} incapsulati uno dentro l'altro e per creare una struttura più semantica è stato utilizzato il tag \texttt{<section>};
+        \item Per creare una struttura più semantica ed evitare tag \texttt{<div>} incorretti, incapsulati uno dentro l'altro, è stato utilizzato il tag \texttt{<section>};
         \item Per incapsulare porzioni di codice che rappresentano aiuti per la navigazione è stato utilizzato il tag \texttt{<nav>};
         \item Le varie opzioni per gli aiuti alla navigazione sono state organizzate con i tag \texttt{<li>} e \texttt{<ul>};
         \item Per rappresentare le intestazioni principali di pagina, sono stati utilizzati i tag \texttt{<h1>} e \texttt{<h2>}; per rappresentare le intestazioni di contenuto si è utilizzato il tag \texttt{<h3>};
-        \item Nel testo di contenuto si è utilizzato, dove serviva, il tag \texttt{<time>} per rappresentare date e ore ed il tag \texttt{<abbr>} per rappresentare abbreviazioni;
+        \item Viene utilizzato il tag \texttt{<abbr>} per rappresentare abbreviazioni;
         \item Per indicare termini in inglese è stato utilizzato l'attributo \texttt{lang=”en”}.
     \end{itemize}
     
     \subsection{Altre regole strutturali}
     Di seguito, sono elencate alcune regole strutturali specifiche per determinate pagine:
     \begin{itemize}
-        \item Nella pagina della \textit{Home} è presente una sezione che rappresenta un anteprima dei più recenti articoli presenti nella pagina \textit{News}; tale blocco è stato incapsulato dentro un tag \texttt{<aside>}. Questa decisione è stata presa perché il contenuto all'interno del tag non è indispensabile per la semantica della \textit{Home} e serve solo a supportare la navigazione nel sito;
+        \item Nella pagina della \textit{Home} è presente una sezione che rappresenta un'anteprima dei più recenti articoli presenti nella pagina \textit{News}; tale blocco è stato incapsulato dentro un tag \texttt{<aside>}. Questa decisione è stata presa perché il contenuto all'interno del tag non è indispensabile per la semantica della \textit{Home} e serve solo a supportare la navigazione nel sito;
         \item Nella pagina delle \textit{News}, ma anche nella pagina \textit{Home} tutti gli articoli sono racchiusi dentro un tag \texttt{<article>} per identificare porzioni di testo che sono indipendenti tra di loro;
-        \item Per organizzare la struttura di ogni tabella l'intestazione della tabella è stata incapsulata dentro il tag \texttt{<thead>}, mentre il corpo della tabella è stato incapsulato dentro il tag \texttt{<tbody>};
+        \item Per organizzare la struttura di ogni tabella, l'intestazione è stata incapsulata dentro il tag \texttt{<thead>}, mentre il corpo è stato incapsulato dentro il tag \texttt{<tbody>};
         \item Nella pagina \textit{Registrazione} è stato usato il tag \texttt{<fieldset>} per suddividere la form in due sezioni: la sezione per compilare i dati anagrafici dell'utente e la sezione per compilare i dati di accesso all'area personale del sito;
-        \item Nella pagina dedicata all'utente la struttura per visualizzare le informazioni anagrafiche è stata costruita usando elenchi di definizioni, usando i tag \texttt{<dl>}, \texttt{<dt>} e \texttt{<dd>};
-        \item Se un utente è autenticato come amministratore nell'area personale è presente un pulsante per passare dalla sezione personale alla sezione che contiene le form per inserire gli articoli e le gare che la società deve pubblicare.
+        \item Nella pagina dedicata all'utente, la struttura per visualizzare le informazioni anagrafiche è stata costruita usando elenchi di definizioni, usando i tag \texttt{<dl>}, \texttt{<dt>} e \texttt{<dd>};
+        \item Se un utente è autenticato come amministratore nell'area personale, è presente un pulsante per passare alla dashboard di amministrazione, che contiene: le form per inserire gli articoli, un pulsante per inserire una nuova partita e, per ogni partita già presente, la possibilità di modificarla o eliminarla.
     \end{itemize}

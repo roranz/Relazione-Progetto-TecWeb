@@ -1,27 +1,27 @@
 \section{Progettazione}
     \subsection{Struttura delle pagine}
-    Per l'organizzazione strutturale delle pagine si è scelto di utilizzare un layout verticale, per rispettare le convenzioni esterne della maggior parte degli utenti e facilitarne la gestione del design, per quando si naviga utilizzando dispositivi diversi dal PC (vedi capitolo \blue{\hyperref[Presentazione]{Presentazione}}).\\
+    Per l'organizzazione strutturale delle pagine si è scelto di utilizzare un layout verticale, per rispettare le convenzioni esterne della maggior parte degli utenti e facilitare la gestione del design, per quando si naviga utilizzando dispositivi diversi dal PC (vedi capitolo \blue{\hyperref[Presentazione]{Presentazione}}).\\
     Tutte le pagine principali utilizzano il seguente schema:
     \begin{itemize}
         \item \textbf{Header}: è l'intestazione della pagina web dove sono presenti logo e titolo;
-        \item \textbf{Menù}: è la parte di pagina contenente una barra di navigazione che indica quali pagine possono essere navigate e comunica se l'utente è autenticato oppure no;
-        \item \textbf{Breadcrumb}: è la parte di pagina che comunica all'utente cosa sta visualizzando e gli fornisce un percorso per aiutarlo ad orientarsi;
+        \item \textbf{Menù}: è la parte di pagina contenente una barra di navigazione che indica le sezioni in cui è diviso il sito e comunica all'utente se è autenticato oppure no;
+        \item \textbf{Breadcrumb}: è la parte di pagina che comunica all'utente cosa sta visualizzando e e lo aiuta ad orientarsi fornendogli il percorso per arrivarci;
         \item \textbf{Body}: è la parte di pagina dove sono esposti i contenuti del sito;
-        \item \textbf{Footer}: è la parte di pagina dove sono inseriti i contatti della società e i loghi di validazione del sito.
+        \item \textbf{Footer}: è la parte di pagina dove sono inseriti i contatti della società, gli autori del sito e i badge di validazione.
     \end{itemize}
     
     \subsection{Schema e struttura organizzativa}
-    Come struttura organizzativa si è deciso di organizzare il sito con una struttura a gerarchia con ampiezza di sette pagine e profondità di massimo due livelli. Questa scelta è stata fatta per migliorare la navigabilità del sito utilizzando una struttura che possa essere facilmente compresa da una persona; per permettergli di sviluppare un chiaro modello mentale del sito, per orientarsi tra le pagine in maniera più naturale e quindi migliore.\\
+    Come struttura organizzativa si è deciso di organizzare il sito con una struttura a gerarchia con ampiezza di otto pagine e profondità di massimo tre livelli. Questa scelta è stata fatta per migliorare la navigabilità del sito utilizzando una struttura che possa essere facilmente compresa da una persona comune; per permettergli di sviluppare un chiaro modello mentale del sito, per orientarsi tra le pagine in maniera più naturale e quindi migliore.\\
     Il sito web è suddiviso nelle seguenti pagine:
     \begin{itemize}
-        \item \textbf{Home}: è la "vetrina" del nostro sito; dentro questa pagina l'utente può trovare informazioni di vario genere che rappresentano un anteprima dei servizi che il sito offre all'utente;
-        \item \textbf{News}: è la pagina dove vengono visualizzate tutte le notizie e gli articoli pubblicati dalla società; per evitare il sovraccarico cognitivo nella pagina viene caricata solo una parte delle notizie pubblicate, ma l'utente le può scorrere tutte usando degli indici predisposti e una casella di ricerca per eventuali interrogazioni;
+        \item \textbf{Home}: è la "vetrina" del nostro sito; dentro questa pagina l'utente può trovare informazioni di vario genere che rappresentano un'anteprima dei servizi offerti all'utente;
+        \item \textbf{News}: è la pagina dove vengono visualizzate tutte le notizie e gli articoli pubblicati dalla società; per evitare il sovraccarico cognitivo nella pagina viene caricata solo una parte delle notizie pubblicate, ma l'utente le può scorrere tutte usando degli indici predisposti e una casella di ricerca per eventuali ricerche più specifiche;
         \item \textbf{Stadio}: è la pagina dove è descritta la storia dello stadio dell'AC Torre Archimede;
-        \item \textbf{La Squadra}: è la pagina dove viene pubblicato l'elenco dei calciatori e dei dirigenti accompagnatori della società;
-        \item \textbf{Calendario}: è la pagina dove sono elencate le ultime gare disputate dalla società;
-        \item \textbf{Biglietteria}: è la pagina dove sono elencate le prossime gare in programma che la squadra dovrà disputare; questa pagina, oltre a fornire i dati di tutte le gare, permette di acquistare un biglietto per una gara, tramite la pagina \textbf{Checkout}.
-        \item \textbf{Login}: è la pagina dove l'utente può autenticarsi al sito, Se ciò avviene correttamente l'utente viene indirizzato nella propria area personale; altrimenti sono presenti link utili per registrarsi oppure per recuperare la propria password nella pagina \textbf{Recupera password};
-        \item \textbf{Area personale/Dashboard admin}: è la pagina dove un utente autenticato può visualizzare e gestire i propri dati anagrafici e l'elenco dei biglietti acquistati; se l'utente autenticato è un amministratore del sito, questa pagina permette l'accesso ad un'ulteriore area riservata, necessaria per gestire diversi aspetti del sito;
+        \item \textbf{La Squadra}: è la pagina dove viene pubblicato l'elenco dei calciatori e dei tecnici della società;
+        \item \textbf{Calendario}: è la pagina dove sono elencate le ultime gare disputate dalla A.C. Torre Archimede;
+        \item \textbf{Biglietteria}: è la pagina dove sono elencate le prossime gare del campionato in programma; questa pagina, oltre a fornire i dati di tutte le gare, permette di acquistare biglietti per quelle che si disputano nel Torre Archimede Stadium, fornendo un sistema di \textbf{Checkout}. Per le altre, viene fornito un collegamento esterno verso il sito dello stadio nel quale si disputa la partita;
+        \item \textbf{Login}: è la pagina dove l'utente può autenticarsi al sito, se ciò avviene correttamente l'utente viene indirizzato nella propria area personale; altrimenti sono presenti link utili per registrarsi oppure per recuperare la propria password nella pagina \textbf{Recupera password};
+        \item \textbf{Area personale}: è la pagina dove un utente autenticato può visualizzare e gestire i propri dati anagrafici e l'elenco dei biglietti acquistati; se l'utente autenticato è un amministratore del sito, questa pagina permette l'accesso ad un'ulteriore pagina (\textbf{Dashboard admin}), necessaria per amministrare diversi aspetti del sito;
         \item \textbf{Registrazione}: è la pagina dove un utente non autenticato potrà inserire i propri dati personali e registrarsi al sito per ottenere le credenziali di accesso necessarie per divenire un utente autenticato e usufruire dei servizi offerti.
     \end{itemize}
     \noindent
