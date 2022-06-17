@@ -1,6 +1,5 @@
-[![Build and Make PDF](https://github.com/roranz/Relazione-Progetto-TecWeb/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/roranz/Relazione-Progetto-TecWeb/actions/workflows/main.yml)
+# Relazione Progetto TecWeb [![Build and Make PDF](https://github.com/roranz/Relazione-Progetto-TecWeb/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/roranz/Relazione-Progetto-TecWeb/actions/workflows/main.yml)
 
-# Relazione-Progetto-TecWeb
 Relazione del Progetto di Tecnologie Web del Corso di Laurea in Informatica 2021/2022
 
 ## Repository codice:
