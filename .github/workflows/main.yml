@@ -24,6 +24,14 @@ jobs:
         working-directory: ${{ env.DIR }}
         #run: latexmk -pdf -bibtex ${{ env.FILE }}
         run: pdflatex ${{ env.FILE }};
+      - name: LaTeX compile 2
+        working-directory: ${{ env.DIR }}
+        #run: latexmk -pdf -bibtex ${{ env.FILE }}
+        run: pdflatex ${{ env.FILE }};
+      - name: LaTeX compile 3
+        working-directory: ${{ env.DIR }}
+        #run: latexmk -pdf -bibtex ${{ env.FILE }}
+        run: pdflatex ${{ env.FILE }};
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
